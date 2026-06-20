@@ -26,3 +26,12 @@ Select:
 
 Output:
 - dout (8-bit)
+
+## Flow
+
+1. Behavioral Simulation
+2. Synthesis
+3. Post-Synthesis Simulation
+4. Implementation
+5. Post-Implementation Simulation
+
