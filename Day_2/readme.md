@@ -35,3 +35,15 @@ Output:
 4. Implementation
 5. Post-Implementation Simulation
 
+## Learnings
+
+- FPGA Design Flow
+- Difference between RTL and Testbench
+- Clock Generation using Testbench
+- Sequential Logic using `always @(posedge clk)`
+- Non-Blocking Assignment (`<=`)
+- Case Statements
+- Constraint Files (.xdc)
+- Synthesis and Implementation Flow
+
+
