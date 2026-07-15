@@ -1,0 +1,24 @@
+module lfsr(
+
+    input wire clk,
+    input wire reset,
+
+    output reg [3:0] lfsr_out
+
+);
+
+    wire feedback;
+
+    assign feedback = lfsr_out[3] ^ lfsr_out[2];
+
+    always @(posedge clk or posedge reset) begin
+
+        if(reset)
+            lfsr_out <= 4'b0001;
+
+        else
+            lfsr_out <= {lfsr_out[2:0], feedback};
+
+    end
+
+endmodule
