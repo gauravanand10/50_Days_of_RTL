@@ -1,0 +1,33 @@
+module file_input_output;
+
+integer file;
+integer i;
+
+reg [7:0] mem [0:25];
+
+initial
+begin
+
+    file = $fopen("D:/Summer_26/50_Days_of_RTL/day_38/day_38.srcs/sim_1/imports/Desktop/data.txt","w");
+
+    for(i=0;i<=25;i=i+1)
+    begin
+        $fdisplay(file,"%x",i);
+    end
+
+    $fclose(file);
+
+    $readmemh("D:/Summer_26/50_Days_of_RTL/day_38/day_38.srcs/sim_1/imports/Desktop/data.txt",mem);
+
+    $display("Contents of Memory");
+
+    for(i=0;i<=25;i=i+1)
+    begin
+        $display("%0d -> %0d",i,mem[i]);
+    end
+
+    $finish;
+
+end
+
+endmodule
